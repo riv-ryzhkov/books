@@ -5,10 +5,12 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Главная страница приложения</h1>
+    <h2>Главная страница приложения</h2>
     {% if books %}
         {% for el in books %}
-            <div class="alert alert-warning mt-2">
+<!--            <div class="alert alert-warning mt-2">-->
+<!--            <div class="alert alert-info mt-2">-->
+            <div class="alert alert-success mt-1">
                 <h3><u>{{ el.title }}</u></h3>
                 <p><b><i>{{ el.author }}</i></b></p>
                 <p><i>{{ el.text }}</i></p>

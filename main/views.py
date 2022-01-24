@@ -3,7 +3,8 @@ from .models import Book
 from .forms import BookForm
 
 def index(request):
-    books = Book.objects.all()
+    # books = Book.objects.all()
+    books = Book.objects.order_by('-id')
     # books = Book.objects.order_by('-id')[:3]
     # books = Book.objects.filter(author='ГОСТ')
     # books = Book.objects.filter(id__gt=2)
@@ -12,6 +13,9 @@ def index(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+def contacts(request):
+    return render(request, 'main/contacts.html')
 
 def create(request):
     error = ''
