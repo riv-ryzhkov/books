@@ -6,9 +6,18 @@
 
 {% block content %}
     <h2>Добавить книгу</h2>
-    <form>
-
-
+    <form method="post">
+        {% csrf_token %}
+        <label for="title"><b>Название книги:</b></label>
+        {{ form.title }}
+        <label for="author"><b>Автор:</b></label>
+        {{ form.author }}
+        <label for="text"><b>Описание:</b></label>
+        {{ form.text }}
+        <label for="published"><b>Год издания:</b></label>
+        {{ form.published }}
+        <label for="count"><b>Количество книг:</b></label>
+        {{ form.count }}
+        <button type="submit" class="btn btn-success">Добавить</button>
     </form>
-
 {% endblock %}
